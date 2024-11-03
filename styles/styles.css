@@ -1,0 +1,154 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+background-color: rgb(255, 255, 255);
+}
+
+/* estilo de los encabezados generales*/
+
+.encabezado {
+  display: flex; /* Crea una estructura flexible */
+  align-items: center; /* Alinea el texto verticalmente al centro */
+  justify-content: space-between; /* Separa el texto y la imagen */
+}
+
+
+.texto_logo {
+  margin-left: 10%;
+  flex: 1; /* El texto ocupará el espacio disponible a la izquierda */
+  padding-right: 20px; /* Espaciado entre el texto y la imagen */
+}
+
+.logo img {
+  margin: 5%;
+  width: 60%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 5%;
+}
+
+/* fin encabezados generales*/
+
+
+h1{
+    margin: 1%;
+    padding: 0.5%;
+    color: beige;
+}
+
+header{
+    background-color: brown;
+}
+
+.logo1 {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    padding-top: 3%;
+}
+
+
+
+/* Estilos del menú */
+
+.menu {
+    text-align: center;
+    background-color: rgb(49, 8, 8);
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+   
+      }
+  
+  .menu li {
+    margin-right: 20px;
+    display: inline;
+   
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #000; 
+    color: white;
+    font-weight: initial;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .menu li a:hover {
+    color: #007BFF; 
+  }
+
+
+/* Banner*/
+
+.banner {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-align: center;
+
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+  /* estilos del footer*/ 
+
+  footer{
+    background-color: rgb(133, 16, 16);
+  }
+
+  .container {
+    display: flex; /* Coloca los div en línea horizontal */
+    justify-content: center; /* Espaciado uniforme entre las columnas */
+  }
+  
+  .column {
+    flex-basis: 30%; /* Cada columna ocupa aproximadamente el 30% del ancho total */
+    margin: 20px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+    
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+   
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  p, ul {
+    margin-bottom: 10px;
+  }
+  
+  .column a {
+    display: block; /* Hace que los enlaces se muestren en una nueva línea */
+    margin-bottom: 5px;
+
+    }
+
+
+    /* Formato Nosotros */
+
+    .nosotros {
+
+      margin-top: 3%;
+    }
