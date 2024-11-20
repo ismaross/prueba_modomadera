@@ -4,13 +4,8 @@
     box-sizing: border-box;
 }
 
-/* Variables*/
-$primary-color: #f0720b; 
-$secondary-color: #f4ede4; 
-$text-color: #333;
-$link-color: #007bff;
-$link-hover-color: darken($link-color, 10%);
-$border-color: #ccc;
+@import "variables.scss";
+
 
 /* Mixins*/
 @mixin flex-center {
@@ -153,6 +148,34 @@ footer {
   }
 }
 
+
+
+// Estilo de la galería de imágenes
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 10px; 
+
+    .foto{
+      overflow: hidden;
+      border-radius: 5px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+        img{
+          width: 100%; 
+          height: auto; 
+          display: block;
+          transition: transform 0.3s ease; 
+        }
+
+        &:hover{
+          transform: scale(1.05); 
+        }
+    }
+
+}
+
    
 // Media Queries
 
@@ -259,5 +282,7 @@ footer {
       }
     }
   }
+
+
   
     
