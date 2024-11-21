@@ -5,16 +5,6 @@
 }
 
 /* Variables*/
-/* Mixins*/
-/* Estilo general*/
-body {
-  font-family: "Arial", sans-serif;
-  color: #333;
-  background-color: #f8f5f1;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   color: #007bff;
@@ -39,7 +29,7 @@ header .encabezado .logo {
   padding: 10px;
 }
 header .encabezado .logo img {
-  width: 300px;
+  width: 200px;
   height: auto;
   border-radius: 5%;
 }
@@ -64,25 +54,7 @@ header .menu ul li a:hover {
   border-radius: 5px;
 }
 
-main .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 50px;
-  background-color: #ffe6ce;
-}
-main .banner h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-main .banner img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px 0 rgba(20, 20, 20, 0.3);
-}
-
+/* Variables*/
 footer {
   background-color: #fd7c04;
   color: white;
@@ -113,24 +85,135 @@ footer .container .column a:hover {
   text-decoration: underline;
 }
 
-.galeria {
+/* Mixins*/
+/* Estilo general*/
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f8f5f1;
+  margin: 0;
+  padding: 0;
+}
+
+.main_index .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  background-color: #ffe6ce;
+}
+.main_index .banner .h2_index {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.main_index .banner img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 0 rgba(20, 20, 20, 0.3);
+}
+
+.main_nosotros .nosotros {
+  font-family: "Chilanka", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.main_nosotros .contenido {
+  display: flex;
+}
+.main_nosotros .contenido .parrafo {
+  margin: 30px;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+.main_nosotros .contenido .taller {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
+
+.main_galeria {
+  height: 300px;
+}
+.main_galeria .h2_fuente {
+  font-family: "Chilanka", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
+}
+.main_galeria .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
+  height: 200px;
 }
-.galeria .foto {
+.main_galeria .galeria .foto {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.galeria .foto img {
+.main_galeria .galeria .foto img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
 }
-.galeria .foto:hover {
+.main_galeria .galeria .foto:hover {
   transform: scale(1.05);
+}
+
+.formulario {
+  justify-items: center;
+  margin-top: 60px;
+}
+.formulario .contact-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.formulario .contact-form h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.formulario .contact-form p {
+  margin-bottom: 20px;
+  color: #666;
+}
+.formulario .contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.formulario .contact-form input, .formulario .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.formulario .contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.formulario .contact-form button:hover {
+  background-color: #a0910b;
 }
 
 @media screen and (max-width: 1200px) {

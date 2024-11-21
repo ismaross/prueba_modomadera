@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+
+a {
+    text-decoration: none;
+    color: $link-color;
+  
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+  
+  header {
+    background-color: $primary-color;
+    color: white;
+    height: 70px;
+  
+    .encabezado {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding: 10px;
+  
+      .logo {
+    
+          padding: 10px;
+  
+        img {
+          width: 200px;
+          height: auto;
+          border-radius: 5%;
+        
+        }
+  
+     
+  
+          }
+    }
+  
+    .menu {
+      background-color: darken($primary-color, 5%) ;
+      box-shadow: 3px 3px 5px 0 rgb(209, 119, 1);
+      border-radius: 10px;
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        
+        
+  
+        li {
+            a {
+            color: white;
+            padding: 10px 15px;
+  
+            &:hover {
+              background-color: lighten($primary-color, 10%);
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
