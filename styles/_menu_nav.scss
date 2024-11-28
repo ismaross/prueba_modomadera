@@ -11,11 +11,16 @@ a {
   }
   
   header {
+    transition: 0.5s;
+   
     background-color: $primary-color;
-    color: white;
+    
+    color: rgb(252, 249, 249);
     height: 70px;
   
     .encabezado {
+     
+      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,8 +28,8 @@ a {
       padding: 10px;
   
       .logo {
-    
-          padding: 10px;
+        
+          padding: 5px;
   
         img {
           width: 200px;
@@ -65,4 +70,58 @@ a {
         }
       }
     }
+  }
+
+  //media querrys
+
+  @media screen and (max-width: 1200px) {
+
+    header {
+      height: 280px;
+      transition: 0.5s;
+
+        .encabezado {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        
+        flex-direction: column;
+        
+        height: 200px;
+
+        .logo{
+          translate: 0px 50px;
+          padding: 10px;
+
+        }
+
+        .menu{
+          translate: 0px 50px;
+          padding: 10px;
+        }
+        
+  
+        
+    
+  
+        .menu ul {
+        flex-direction: column;
+  
+        li {
+        margin: 5px 0;
+  
+        a {
+          padding: 10px;
+        }
+      }
+    }
+
+  }
+
+    .banner{
+      flex-direction: column;
+      text-align: center;
+      margin-top: 200px;
+    }
+  }
   }

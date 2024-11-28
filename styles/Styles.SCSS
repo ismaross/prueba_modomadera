@@ -61,14 +61,17 @@ body {
 // diseño Nosotros
 
 .main_nosotros{
- 
-    
+  
     .nosotros{
+     
       font-family: "Chilanka", cursive;
       font-style: normal;
       font-weight: bold;
       font-size: 3rem;
-    }
+      padding-top: 30px;
+      margin: 20px;
+      
+      }
 
    .contenido{
     display: flex;
@@ -81,10 +84,18 @@ body {
         font-size: 1.2rem;
         
     }
-    .taller{
-      width: 300px;
-      height: auto;
-      padding: 10px;
+
+
+    
+      .taller{
+          padding: 10px;
+          
+          img{ 
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px 0 rgba(20, 20, 20, 0.3);
+      }
     }
     }
 }
@@ -96,14 +107,16 @@ body {
 // diseño galería de imágenes (juguetes - diseño_iluminación)
 
 .main_galeria{
+  height: 300px;
+
+
   .h2_fuente{
     font-family: "Chilanka", cursive;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 3rem;
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
   }
 
-height: 300px;
   .galeria{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -125,6 +138,28 @@ height: 300px;
         &:hover{
           transform: scale(1.05); 
         }
+
+        /* Estilo para el texto descriptivo */
+.descripcion {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0; /* Oculto por defecto */
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.foto:hover .descripcion {
+  opacity: 1;
+  transform: translateY(0); /* Aparece al pasar el mouse */
+}
     }
 
 }
@@ -192,34 +227,34 @@ margin-top: 60px;
    
 // Media Queries
 
-@media screen and (max-width: 1200px) {
-    header .encabezado {
-      flex-direction: column;
+  // nosotros
+
+
+  @media screen and (max-width: 1200px) {
+
+    .nosotros{
       text-align: center;
-        
-  
-      .logo img {
-        width: 50px;
-          }
+
     }
-  
-    .menu ul {
-      flex-direction: column;
-  
-      li {
-        margin: 5px 0;
-  
-        a {
-          padding: 10px;
-        }
-      }
-    }
-    .banner{
-      flex-direction: column;
-      text-align: center;
-      margin-top: 200px;
-    }
+  .contenido{
+    flex-direction: column;
+    text-align: center;
   }
+  }
+
+
+// galería
+
+/*.main_galeria{
+  .galeria{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+
+  }
+}*/
+ 
   
   @media screen and (max-width: 768px) {
     .banner {
@@ -243,6 +278,8 @@ margin-top: 60px;
     }
   }
   
+
+
   @media screen and (max-width: 480px) {
     header .encabezado {
       padding: 10px;
@@ -295,7 +332,5 @@ margin-top: 60px;
       }
     }
   }
-
-
   
-    
+

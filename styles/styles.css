@@ -14,8 +14,9 @@ a:hover {
 }
 
 header {
+  transition: 0.5s;
   background-color: #fd7c04;
-  color: white;
+  color: rgb(252, 249, 249);
   height: 70px;
 }
 header .encabezado {
@@ -26,7 +27,7 @@ header .encabezado {
   padding: 10px;
 }
 header .encabezado .logo {
-  padding: 10px;
+  padding: 5px;
 }
 header .encabezado .logo img {
   width: 200px;
@@ -54,6 +55,41 @@ header .menu ul li a:hover {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 1200px) {
+  header {
+    height: 280px;
+    transition: 0.5s;
+  }
+  header .encabezado {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 200px;
+  }
+  header .encabezado .logo {
+    translate: 0px 50px;
+    padding: 10px;
+  }
+  header .encabezado .menu {
+    translate: 0px 50px;
+    padding: 10px;
+  }
+  header .encabezado .menu ul {
+    flex-direction: column;
+  }
+  header .encabezado .menu ul li {
+    margin: 5px 0;
+  }
+  header .encabezado .menu ul li a {
+    padding: 10px;
+  }
+  header .banner {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 200px;
+  }
+}
 /* Variables*/
 footer {
   background-color: #fd7c04;
@@ -90,7 +126,7 @@ footer .container .column a:hover {
 body {
   font-family: "Arial", sans-serif;
   color: #333;
-  background-color: #f8f5f1;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -123,6 +159,8 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
+  padding-top: 30px;
+  margin: 20px;
 }
 .main_nosotros .contenido {
   display: flex;
@@ -135,9 +173,13 @@ body {
   font-size: 1.2rem;
 }
 .main_nosotros .contenido .taller {
+  padding: 10px;
+}
+.main_nosotros .contenido .taller img {
   width: 300px;
   height: auto;
-  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 0 rgba(20, 20, 20, 0.3);
 }
 
 .main_galeria {
@@ -145,9 +187,9 @@ body {
 }
 .main_galeria .h2_fuente {
   font-family: "Chilanka", cursive;
-  font-weight: 600;
   font-style: normal;
   font-size: 3rem;
+  font-weight: 600;
 }
 .main_galeria .galeria {
   display: grid;
@@ -159,6 +201,7 @@ body {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Estilo para el texto descriptivo */
 }
 .main_galeria .galeria .foto img {
   width: 100%;
@@ -168,6 +211,25 @@ body {
 }
 .main_galeria .galeria .foto:hover {
   transform: scale(1.05);
+}
+.main_galeria .galeria .foto .descripcion {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0; /* Oculto por defecto */
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+.main_galeria .galeria .foto .foto:hover .descripcion {
+  opacity: 1;
+  transform: translateY(0); /* Aparece al pasar el mouse */
 }
 
 .formulario {
@@ -217,28 +279,23 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-  header .encabezado {
-    flex-direction: column;
+  .nosotros {
     text-align: center;
   }
-  header .encabezado .logo img {
-    width: 50px;
-  }
-  .menu ul {
-    flex-direction: column;
-  }
-  .menu ul li {
-    margin: 5px 0;
-  }
-  .menu ul li a {
-    padding: 10px;
-  }
-  .banner {
+  .contenido {
     flex-direction: column;
     text-align: center;
-    margin-top: 200px;
   }
 }
+/*.main_galeria{
+  .galeria{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+
+  }
+}*/
 @media screen and (max-width: 768px) {
   .banner {
     padding: 20px;
